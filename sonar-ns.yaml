@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: sonarqube-devsecops-ns
+  labels:
+    name: sonarqube-devsecops

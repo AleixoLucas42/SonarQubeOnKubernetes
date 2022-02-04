@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sonarqube-devsecops-in
+  namespace: escala-hml
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - sonarqube.company.com
+    secretName: tls-secret-name
+  rules:
+  - host: sonarqube.company.com
+    http:
+      paths:
+      - path: /sonarqube.company.com
+        pathType: Prefix
+        backend:
+          service:
+            name: sonarqube-devsecops-svc
+            port:
+              number: 80

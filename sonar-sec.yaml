@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sonarqube-devsecops-sec
+  namespace: sonarqube-devsecops
+type: Opaque
+data:
+  SONARQUBE_JDBC_USERNAME: cG9zdGdyZXM=
+  SONARQUBE_JDBC_PASSWORD: S20wQWM3UHFxNERuQTRNOA==
+  SONARQUBE_JDBC_URL: amRiYzpwb3N0Z3Jlc3FsOi8vMzQuMTIxLjgxLjU2OjU0MzIvc29uYXJfZGI=

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sonarqube-devsecops
+  name: sonarqube-devsecops-svc
+  namespace: sonarqube-devsecops
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    app: sonarqube-devsecops
+  sessionAffinity: None
+  type: ClusterIP
